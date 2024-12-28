@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f4f4f9;
+            }
+            .signup-form {
+                background: #fff;
+                padding: 20px 30px;
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                width: 350px;
+                text-align: center;
+            }
+            .signup-form h2 {
+                margin-bottom: 25px;
+                font-size: 26px;
+                color: #333;
+            }
+            .form-group {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #555;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 15px;
+                box-sizing: border-box;
+            }
+            .signup-btn {
+                width: 100%;
+                padding: 12px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .signup-btn:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="signup-form">
+            <h2>Signup</h2>
+            <form action="/submit_signup" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="signup-btn">Signup</button>
+            </form>
+        </div>
+    </body>
+</html>
